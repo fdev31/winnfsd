@@ -12,7 +12,7 @@ LDFLAGS:=-g -static-libgcc -static-libstdc++ -mconsole
 LIBS:=-lws2_32
 
 $(PROGRAM): $(OBJS)
-	$(LINK.o) $^ $(LIBS) -o $@
+	$(LINK.o) $^ $(LIBS) -o $@  -lshlwapi
 
 .PHONY: clean
 
