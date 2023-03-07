@@ -101,7 +101,7 @@ unsigned int CSocketStream::GetSize(void)
     return m_nInBufferSize - m_nInBufferIndex;  //number of bytes of rest data in the input buffer
 }
 
-void CSocketStream::Write(void *pData, unsigned int nSize)
+void CSocketStream::Write(const void *pData, unsigned int nSize)
 {
     if (m_nOutBufferIndex + nSize > MAXDATA) { //over the size of output buffer
         nSize = MAXDATA - m_nOutBufferIndex;

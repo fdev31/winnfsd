@@ -19,7 +19,7 @@ class CSocketStream : public IInputStream, public IOutputStream
     unsigned int Read8(unsigned __int64 *pnValue);
     unsigned int Skip(unsigned int nSize);
     unsigned int GetSize(void);
-    void Write(void *pData, unsigned int nSize);
+    void Write(const void *pData, unsigned int nSize);
     void Write(unsigned long nValue);
     void Write8(unsigned __int64 nValue);
     void Seek(int nOffset, int nFrom);
